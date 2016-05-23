@@ -33,3 +33,6 @@ Not working:
 - Sensors
 
 GPS: Untested
+
+XDA Post:
+http://forum.xda-developers.com/optimus-l3-l5-l7/development/e400-cyanogenmod10-t3385017
