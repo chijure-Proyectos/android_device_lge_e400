@@ -1,2 +1,34 @@
-# android_device_lge_e400
-Device folder for LGE E400
+Device config for CyanogenMod LGE E400
+
+Working.... 
+
+Any help are welcome :)
+
+Thanks to:
+- Sooraj Sizon
+- TeamHackLG
+- PecanCM
+- TeamPico
+- TeamPhoenix
+- CyanogenMod Team
+- androidarmv6
+
+Screenshots (sorry for the quality):
+
+http://imgur.com/a/6cqwB
+
+Working:
+- Bluetooth
+- Display
+- SD Card
+- USB
+- Buttons
+- Leds
+- Video Playback
+
+Not working:
+- Ril
+- Wifi
+- Camera
+
+GPS: Untested
