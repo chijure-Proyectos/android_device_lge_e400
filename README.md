@@ -30,5 +30,6 @@ Not working:
 - Ril
 - Wifi
 - Camera
+- Sensors
 
 GPS: Untested
