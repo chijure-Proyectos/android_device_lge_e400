@@ -25,14 +25,13 @@ Working:
 - Buttons
 - Leds
 - Video Playback
+- Wifi
 
 Not working:
 - Ril
-- Wifi
 - Camera
 - Sensors
-
-GPS: Untested
+- GPS
 
 XDA Post:
 http://forum.xda-developers.com/optimus-l3-l5-l7/development/e400-cyanogenmod10-t3385017
