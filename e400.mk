@@ -57,9 +57,6 @@ PRODUCT_COPY_FILES += \
 # BT
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/chgchk:system/bin/chgchk
 	
 # Baseband
 PRODUCT_PACKAGES += \
@@ -70,7 +67,6 @@ PRODUCT_PACKAGES += \
     audio.primary.msm7x27a \
     audio_policy.msm7x27a \
     audio.a2dp.default \
-    audio_policy.conf \
     libaudioutils \
 	audio.usb.default
 
@@ -84,7 +80,6 @@ PRODUCT_PACKAGES += \
     gps.e400 \
     charger \
     charger_res_images
-#	camera.e400
 
 # OMX
 PRODUCT_PACKAGES += \

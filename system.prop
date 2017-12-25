@@ -27,3 +27,4 @@ persist.service.adb.enable=1
 
 ro.additionalmounts=/mnt/extra-sd
 ro.vold.switchablepair=/mnt/sdcard,/mnt/extra-sd
+ro.vold.umsdirtyratio=20

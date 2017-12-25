@@ -57,8 +57,7 @@ on post-fs-data
     chown dhcp dhcp /data/misc/dhcp
 	
 	## Sensors daemon stuff
-#	mkdir /data/misc/sens 2755 system compass
-	mkdir /data/misc/sensor 2755 system compass
+	mkdir /data/misc/sens 2755 system compass
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
     # We chown/chmod /persist again so because mount is run as root + defaults
@@ -214,9 +213,6 @@ on boot
 
 # Fix FFC
     write /proc/sys/kernel/randomize_va_space 1
-	
-	#touch /data/misc/wifi/ipconfig.txt
-	#chmod 0777 /data/misc/wifi/ipconfig.txt
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/mmcblk0p11 /dev/block/mmcblk0p17
     class core
@@ -224,7 +220,7 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/mmc
     disabled
 
 service sensord /system/bin/sensord
-    class late_start
+    class core
    	oneshot
 
 service setapversion /system/bin/lgapversion
@@ -238,7 +234,6 @@ on property:gsm.version.baseband=""
 ## WLAN
 service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -Dwext -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf
     class late_start
-#   user root
     group wifi inet
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
@@ -305,10 +300,7 @@ service charger /charger
     oneshot
 	
 #start camera server as daemon
- service qcamerasvr /system/bin/mm-qcamera-daemon
-         class late_start
-         user camera
-         group camera system inet audio
-
-on property:init.svc.charger=running
-    exec /system/bin/chgchk
+service qcamerasvr /system/bin/mm-qcamera-daemon
+	class late_start
+	user camera
+	group camera system inet audio

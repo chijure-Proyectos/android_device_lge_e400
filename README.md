@@ -34,6 +34,8 @@ Working:
 Not working:
 - Ril
 - Camera
+- Wifi tethering
+- Some visual bugs (thinks like lockscreen with weather, mass storage activity, etc)
 
 XDA Post:
 http://forum.xda-developers.com/optimus-l3-l5-l7/development/e400-cyanogenmod10-t3385017
