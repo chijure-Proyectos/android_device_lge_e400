@@ -21,17 +21,19 @@ Working:
 - Bluetooth
 - Display
 - SD Card
-- USB
+- USB (adb, mtp, mass storage)
 - Buttons
 - Leds
 - Video Playback
 - Wifi
+- Microhpone
+- USB Tethering
+- Sensors
+- GPS (i think)
 
 Not working:
 - Ril
 - Camera
-- Sensors
-- GPS
 
 XDA Post:
 http://forum.xda-developers.com/optimus-l3-l5-l7/development/e400-cyanogenmod10-t3385017

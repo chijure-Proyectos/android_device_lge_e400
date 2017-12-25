@@ -14,7 +14,6 @@
      limitations under the License.
 -->
 
-<!-- Passion-specific phone app resources. -->
 <resources>
 
     <!-- Flag indicating whether the Phone app should ignore
@@ -24,5 +23,6 @@
     <bool name="ignore_sim_network_locked_events">true</bool>
 
     <bool name="send_mic_mute_to_AudioManager">true</bool>
+
 
 </resources>

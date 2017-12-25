@@ -15,7 +15,7 @@ on property:sys.usb.config=adb
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 1004
     write /sys/class/android_usb/android0/idProduct 6000
-    write /sys/class/android_usb/android0/functions acm,adb
+    write /sys/class/android_usb/android0/functions serial,diag,rndis,mass_storage,adb
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state $sys.usb.config
 

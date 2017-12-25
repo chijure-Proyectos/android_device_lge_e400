@@ -38,8 +38,7 @@ $(call inherit-product, build/target/product/full.mk)
 
 # Permission files
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
@@ -48,7 +47,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+	frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -62,10 +61,18 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/chgchk:system/bin/chgchk
 	
-# Misc
+# Baseband
 PRODUCT_PACKAGES += \
-    lgapversion \
-	hwprops
+    lgapversion
+	
+# Audio
+PRODUCT_PACKAGES += \
+    audio.primary.msm7x27a \
+    audio_policy.msm7x27a \
+    audio.a2dp.default \
+    audio_policy.conf \
+    libaudioutils \
+	audio.usb.default
 
 # HW HALS
 PRODUCT_PACKAGES += \
@@ -74,25 +81,14 @@ PRODUCT_PACKAGES += \
     gralloc.msm7x27a \
     hwcomposer.msm7x27a \
     copybit.msm7x27a \
-#	camera.e400 \
     gps.e400 \
-	libqdutils \
-	libmemalloc \
-	libtilerenderer \
-	power.msm7x27a \
-    audio.a2dp.default \
-	audio_policy.conf \
-	libaudioutils \
-    audio.primary.msm7x27a \
-    audio_policy.msm7x27a \
     charger \
     charger_res_images
+#	camera.e400
 
 # OMX
 PRODUCT_PACKAGES += \
-    libstagefrighthw \
-    libmm-omxcore \
-	libOmxCore
+    libstagefrighthw
 	
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_e400
