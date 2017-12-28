@@ -31,7 +31,7 @@ Working:
 - USB Tethering
 - Sensors
 - GPS (i think)
-- Camera (phoros)
+- Camera (photos)
 
 Not working:
 - Ril
