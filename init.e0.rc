@@ -150,14 +150,6 @@ on boot
 	chmod 0660 /data/hostapd/hostapd.conf
     # Change owner and group for media server and surface flinger
     chown media system /sys/devices/virtual/graphics/fb1/format_3d
-	
-	#port-bridge
-    chmod 0660 /dev/smd0
-    chown system system /dev/smd0
-	chmod 0660 /dev/ttyGS0
-    chown system system /dev/ttyGS0
-    chmod 0660 /dev/ttyMSM0
-    chown system system /dev/ttyMSM0
 
     #For netmgr daemon to inform the USB driver of the correct transport
     chown radio radio /sys/class/usb_composite/rmnet_smd_sdio/transport
