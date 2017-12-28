@@ -12,6 +12,7 @@ Thanks to:
 - TeamPhoenix
 - CyanogenMod Team
 - androidarmv6
+- Gellmar
 
 Screenshots (sorry for the quality):
 
@@ -30,11 +31,13 @@ Working:
 - USB Tethering
 - Sensors
 - GPS (i think)
+- Camera (phoros)
 
 Not working:
 - Ril
-- Camera
+- Camera (panorama and video)
 - Wifi tethering
+- Audio routing to headphones
 - Some visual bugs (thinks like lockscreen with weather, mass storage activity, etc)
 
 XDA Post:

@@ -11,7 +11,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=5m \
     dalvik.vm.heapgrowthlimit=32m \
-    dalvik.vm.heapsize=96m
+	dalvik.vm.heapsize=76m
 
 PRODUCT_AAPT_CONFIG := normal mdpi ldpi
 PRODUCT_AAPT_PREF_CONFIG := ldpi
@@ -61,7 +61,7 @@ PRODUCT_COPY_FILES += \
 # Baseband
 PRODUCT_PACKAGES += \
     lgapversion
-	
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm7x27a \
@@ -78,6 +78,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a \
     copybit.msm7x27a \
     gps.e400 \
+	camera.e400 \
     charger \
     charger_res_images
 
