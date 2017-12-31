@@ -264,19 +264,17 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
 	oneshot
 
 service qmiproxy /system/bin/qmiproxy
+    class late_start
     user radio
     group radio
-#    disabled
 
 service qmuxd /system/bin/qmuxd
+    class late_start
     user radio
     group radio
-#    disabled
 
 service netmgrd /system/bin/netmgrd
-# LGE_CHANGE_S, [Data_Patch_045] [data-lab2@lge.com], 2011-12-05 <Enable netmgrd in init.[Model].rc>
-#    disabled	//wonkwon.lee 2011.12.05 Power On/Off Fail(netmgrd is NOT running => PDP activation fail => PS icon in indicator is not displayed)
-# LGE_CHANGE_E, [Data_Patch_045] [data-lab2@lge.com], 2011-12-05 <Enable netmgrd in init.[Model].rc>
+	class late_start
 	
 service ril-daemon1 /system/bin/rild -c 1
 	class main
