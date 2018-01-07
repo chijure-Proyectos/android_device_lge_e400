@@ -158,8 +158,9 @@ public:
     // Example value: "(10500,26623),(15000,26623),(30000,30000)"
     static const char KEY_SUPPORTED_PREVIEW_FPS_RANGE[];
     // The image format for preview frames. See CAMERA_MSG_PREVIEW_FRAME in
-    // system/core/include/system/camera.h.
-    // Example value: "yuv420sp" or PIXEL_FORMAT_XXX constants. Read/write.
+    // frameworks/av/include/camera/Camera.h. The default is
+    // PIXEL_FORMAT_YUV420SP. Example value: "yuv420sp" or PIXEL_FORMAT_XXX
+    // constants. Read/write.
     static const char KEY_PREVIEW_FORMAT[];
     // Supported image formats for preview frames.
     // Example value: "yuv420sp,yuv422i-yuyv". Read only.
@@ -183,6 +184,7 @@ public:
     static const char KEY_PICTURE_COUNT[];
     static const char KEY_MAX_BURST_PICTURE_COUNT[];
     static const char KEY_SUPPORTED_CONTINUOUS_AF[];
+    static const char KEY_SUPPORTED_CAF[];
     static const char CAPTURE_MODE_NORMAL[];
     static const char CAPTURE_MODE_BURST[];
     static const char CAPTURE_MODE_CONTI_BURST[];
@@ -197,7 +199,7 @@ public:
     // Example value: "2048x1536,1024x768". Read only.
     static const char KEY_SUPPORTED_PICTURE_SIZES[];
     // The image format for captured pictures. See CAMERA_MSG_COMPRESSED_IMAGE
-    // in system/core/include/system/camera.h.
+    // in frameworks/base/include/camera/Camera.h.
     // Example value: "jpeg" or PIXEL_FORMAT_XXX constants. Read/write.
     static const char KEY_PICTURE_FORMAT[];
     // Supported image formats for captured pictures.
@@ -481,7 +483,7 @@ public:
     // value is "true". It is not supported if the value is not "true" or the
     // key does not exist.
     // See CAMERA_CMD_START_SMOOTH_ZOOM, CAMERA_CMD_STOP_SMOOTH_ZOOM, and
-    // CAMERA_MSG_ZOOM in system/core/include/system/camera.h.
+    // CAMERA_MSG_ZOOM in frameworks/base/include/camera/Camera.h.
     // Example value: "true". Read only.
     static const char KEY_SMOOTH_ZOOM_SUPPORTED[];
 
@@ -515,7 +517,7 @@ public:
     static const char KEY_VIDEO_SIZE[];
     // A list of the supported dimensions in pixels (width x height)
     // for video frames. See CAMERA_MSG_VIDEO_FRAME for details in
-    // system/core/include/system/camera.h.
+    // frameworks/base/include/camera/Camera.h.
     // Example: "176x144,1280x720". Read only.
     static const char KEY_SUPPORTED_VIDEO_SIZES[];
 
@@ -544,7 +546,7 @@ public:
     static const char KEY_PREFERRED_PREVIEW_SIZE_FOR_VIDEO[];
 
     // The image format for video frames. See CAMERA_MSG_VIDEO_FRAME in
-    // system/core/include/system/camera.h.
+    // frameworks/base/include/camera/Camera.h.
     // Example value: "yuv420sp" or PIXEL_FORMAT_XXX constants. Read only.
     static const char KEY_VIDEO_FRAME_FORMAT[];
 
@@ -825,6 +827,7 @@ public:
     static const char CONTINUOUS_AF_OFF[] ;
     static const char CONTINUOUS_AF_ON[] ;
     static const char KEY_CONTINUOUS_AF[] ;
+    static const char KEY_CAF[] ;
 
     // Normal focus mode. Applications should call
     // CameraHardwareInterface.autoFocus to start the focus in this mode.
@@ -836,6 +839,8 @@ public:
     static const char ISO_400[];
     static const char ISO_800[];
     static const char ISO_1600[];
+    static const char ISO_3200[];
+    static const char ISO_6400[];
     // Values for Lens Shading
     static const char LENSSHADE_ENABLE[] ;
     static const char LENSSHADE_DISABLE[] ;
@@ -847,20 +852,14 @@ public:
 
     static const char KEY_SHARPNESS[];
     static const char KEY_MAX_SHARPNESS[];
-#ifdef QCOM_HARDWARE
     static const char KEY_MIN_SHARPNESS[];
-#endif
     static const char KEY_CONTRAST[];
     static const char KEY_MAX_CONTRAST[];
-#ifdef QCOM_HARDWARE
     static const char KEY_MIN_CONTRAST[];
-#endif
     static const char KEY_SATURATION[];
     static const char KEY_MAX_SATURATION[];
-#ifdef QCOM_HARDWARE
     static const char KEY_MIN_SATURATION[];
     static const char KEY_SHUTTER_SOUND[];
-#endif
 
     static const char KEY_HISTOGRAM[] ;
     static const char KEY_SUPPORTED_HISTOGRAM_MODES[] ;
