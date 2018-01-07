@@ -68,7 +68,7 @@ PRODUCT_PACKAGES += \
     audio_policy.msm7x27a \
     audio.a2dp.default \
     libaudioutils \
-	audio.usb.default
+    audio.usb.default
 
 # HW HALS
 PRODUCT_PACKAGES += \
@@ -78,9 +78,13 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a \
     copybit.msm7x27a \
     gps.e400 \
-	camera.e400 \
+    camera.e400 \
     charger \
     charger_res_images
+
+# Power Hal
+PRODUCT_PACKAGES += \
+    power.msm7x27a
 
 # OMX
 PRODUCT_PACKAGES += \
