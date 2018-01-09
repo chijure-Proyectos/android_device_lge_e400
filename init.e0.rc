@@ -296,6 +296,9 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 	user camera
 	group camera system inet audio
 
+on property:init.svc.charger=running		
+    exec /system/bin/chgchk
+
 ## TEMPORARY. WE NEED AN FSTAB TO USE mount_all
 on property:dev.bootcomplete=1
 	start setapversion
